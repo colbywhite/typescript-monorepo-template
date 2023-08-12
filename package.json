@@ -1,0 +1,26 @@
+{
+  "name": "@monorepo/root",
+  "workspaces": [
+    "./packages/*"
+  ],
+  "scripts": {
+    "build": "tsc --build .",
+    "format:fix": "prettier -w ."
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Colby M. White <colbywhite@users.noreply.github.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@types/node": "^20.4.10",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.47.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.0.1",
+    "prettier-config-standard": "^7.0.0",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.1.6"
+  }
+}

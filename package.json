@@ -1,10 +1,13 @@
 {
   "name": "@monorepo/root",
   "workspaces": [
-    "./packages/*"
+    "./packages/*",
+    "./web"
   ],
   "scripts": {
-    "build": "tsc --build .",
+    "build": "run-s build:pkg build:web",
+    "build:web": "yarn workspace @monorepo/web astro build",
+    "build:pkg": "tsc --build .",
     "format:fix": "prettier -w ."
   },
   "version": "1.0.0",
